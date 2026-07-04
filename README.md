@@ -1,1 +1,21 @@
-# passwort_analyzer
+Password Analyzer & Generator
+
+A simple JavaFX desktop application that analyzes password strength and generates secure passwords. The project demonstrates basic UI design, password validation, and random password generation in Java.
+
+Features: 
+- Password strength analysis
+- Secure password generator
+- Show/Hide password toggle
+- Visual strength indicator (ProgressBar)
+- Instant feedback on password quality
+- Detection of common weak passwords
+
+
+![start](https://raw.githubusercontent.com/Fabi802/passwort_analyser/main/screenshots/start.png)
+
+
+Technologies Used:
+- Java 21+
+- JavaFX
+- FXML for UI design
+- SecureRandom for password generation
