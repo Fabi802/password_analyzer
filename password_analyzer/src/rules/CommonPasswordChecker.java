@@ -1,6 +1,8 @@
+package rules;
+
 import java.util.Set;
 
-public class CommonPasswordChecker implements passwordRule{
+public class CommonPasswordChecker implements passwordRule {
     Set<String> passwordSet = Set.of(
             "123456", "password", "123456789", "12345678", "12345", "111111", "123123",
             "qwerty", "abc123", "password1", "1234567", "1234", "qwerty123", "iloveyou",

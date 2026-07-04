@@ -1,8 +1,10 @@
-import rules.*;
+package com.example.password_code;
+
+import com.example.password_code.rules.*;
 
 import java.util.List;
 
-public class PasswordStrength{
+public class PasswordStrength {
     public boolean[] checkPassword(String password){
         List<passwordRule> rules = List.of(
                 new UppercaseChecker(),

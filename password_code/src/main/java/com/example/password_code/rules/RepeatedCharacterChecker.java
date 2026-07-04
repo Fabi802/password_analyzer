@@ -1,3 +1,5 @@
+package com.example.password_code.rules;
+
 public class RepeatedCharacterChecker implements passwordRule {
     @Override
     public boolean checkPassword(String password) {

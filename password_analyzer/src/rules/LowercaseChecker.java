@@ -1,3 +1,5 @@
+package rules;
+
 public class LowercaseChecker implements passwordRule {
     @Override
     public boolean checkPassword(String password) {

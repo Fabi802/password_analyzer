@@ -1,3 +1,5 @@
+package rules;
+
 public class UppercaseChecker implements passwordRule {
     @Override
     public boolean checkPassword(String password) {

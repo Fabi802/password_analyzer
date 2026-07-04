@@ -1,8 +1,10 @@
-public class NumberCheck implements passwordRule{
+package com.example.password_code.rules;
+
+public class SpecialChecker implements passwordRule {
     @Override
     public boolean checkPassword(String password) {
         for(char c : password.toCharArray() ) {
-            if(Character.isDigit(c)) {
+            if(!Character.isLetterOrDigit(c)) {
                 return true;
             }
         }
