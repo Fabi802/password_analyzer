@@ -18,6 +18,7 @@ public class CommonPasswordChecker implements passwordRule {
 
     @Override
     public boolean checkPassword(String password) {
+        //checking for any of the popular passwords
         return !passwordSet.contains(password.toLowerCase());
     }
 }
