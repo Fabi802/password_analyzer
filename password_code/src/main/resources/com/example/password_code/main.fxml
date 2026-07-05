@@ -15,8 +15,8 @@
          xmlns="http://javafx.com/javafx"
          fx:controller="com.example.password_code.Controller">
 
-    <!-- Tab 1: Passwort analysieren -->
-    <Tab text="Analysieren" closable="false">
+    <!-- Tab 1: check password -->
+    <Tab text="Analyze" closable="false">
         <VBox spacing="12"
               alignment="CENTER"
               style="-fx-background-color: #f4f4f4; -fx-padding: 20;">
@@ -27,11 +27,11 @@
             <HBox spacing="5" alignment="CENTER">
 
                 <PasswordField fx:id="passwordField"
-                               promptText="Passwort eingeben"
+                               promptText="enter password"
                                prefWidth="210"/>
 
                 <TextField fx:id="textField"
-                           promptText="Passwort eingeben"
+                           promptText="enter password"
                            prefWidth="210"
                            visible="false"
                            managed="false"/>
@@ -42,7 +42,7 @@
                         prefWidth="40"/>
             </HBox>
 
-            <Button text="Prüfen"
+            <Button text="check"
                     onAction="#checkPassword"
                     prefWidth="120"/>
 
@@ -55,8 +55,8 @@
         </VBox>
     </Tab>
 
-    <!-- Tab 2: Passwort generieren -->
-    <Tab text="Generieren" closable="false">
+    <!-- Tab 2: generate password -->
+    <Tab text="Generate" closable="false">
         <VBox spacing="15"
               alignment="CENTER"
               style="-fx-background-color: #f4f4f4; -fx-padding: 20;">
@@ -67,9 +67,9 @@
             <TextField fx:id="generatedPasswordField"
                        editable="false"
                        prefWidth="250"
-                       promptText="Generiertes Passwort"/>
+                       promptText="generated password"/>
 
-            <Button text="Passwort generieren"
+            <Button text="generate password"
                     onAction="#generatePassword"
                     prefWidth="180"/>
 
