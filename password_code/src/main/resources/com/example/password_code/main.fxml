@@ -6,51 +6,74 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.layout.HBox?>
-
-
 <?import javafx.scene.control.TextField?>
-<VBox xmlns:fx="http://javafx.com/fxml"
-      xmlns="http://javafx.com/javafx"
-      fx:controller="com.example.password_code.Controller"
-      spacing="12"
-      alignment="CENTER"
-      style="-fx-background-color: #f4f4f4; -fx-padding: 20;">
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.Tab?>
 
-    <Label text="Password Analyzer"
-           style="-fx-font-size: 20px; -fx-font-weight: bold;" />
 
-    <HBox spacing="5" alignment="CENTER">
+<TabPane xmlns:fx="http://javafx.com/fxml"
+         xmlns="http://javafx.com/javafx"
+         fx:controller="com.example.password_code.Controller">
 
-        <PasswordField fx:id="passwordField"
-                       promptText="Enter password"
-                       prefWidth="210"/>
+    <!-- Tab 1: Passwort analysieren -->
+    <Tab text="Analysieren" closable="false">
+        <VBox spacing="12"
+              alignment="CENTER"
+              style="-fx-background-color: #f4f4f4; -fx-padding: 20;">
 
-        <TextField fx:id="textField"
-                   promptText="Enter password"
-                   prefWidth="210"
-                   visible="false"
-                   managed="false"/>
+            <Label text="Password Analyzer"
+                   style="-fx-font-size: 20px; -fx-font-weight: bold;" />
 
-        <Button fx:id="toggleButton"
-                text="👁"
-                onAction="#togglePassword"
-                prefWidth="40"/>
-    </HBox>
+            <HBox spacing="5" alignment="CENTER">
 
-    <HBox spacing="10" alignment="CENTER">
-        <Button text="Check"
-            onAction="#checkPassword"
-            prefWidth="120"/>
-        <Button text="Generate"
-                onAction="#generatePassword"
-                prefWidth="120"/>
-    </HBox>
+                <PasswordField fx:id="passwordField"
+                               promptText="Passwort eingeben"
+                               prefWidth="210"/>
 
-    <ProgressBar fx:id="strengthBar"
-                 prefWidth="250"
-                 progress="0"/>
+                <TextField fx:id="textField"
+                           promptText="Passwort eingeben"
+                           prefWidth="210"
+                           visible="false"
+                           managed="false"/>
 
-    <Label fx:id="resultLabel"
-           text="" />
+                <Button fx:id="toggleButton"
+                        text="👁"
+                        onAction="#togglePassword"
+                        prefWidth="40"/>
+            </HBox>
 
-</VBox>
+            <Button text="Prüfen"
+                    onAction="#checkPassword"
+                    prefWidth="120"/>
+
+            <ProgressBar fx:id="strengthBar"
+                         prefWidth="250"
+                         progress="0"/>
+
+            <Label fx:id="resultLabel"/>
+
+        </VBox>
+    </Tab>
+
+    <!-- Tab 2: Passwort generieren -->
+    <Tab text="Generieren" closable="false">
+        <VBox spacing="15"
+              alignment="CENTER"
+              style="-fx-background-color: #f4f4f4; -fx-padding: 20;">
+
+            <Label text="Password Generator"
+                   style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+
+            <TextField fx:id="generatedPasswordField"
+                       editable="false"
+                       prefWidth="250"
+                       promptText="Generiertes Passwort"/>
+
+            <Button text="Passwort generieren"
+                    onAction="#generatePassword"
+                    prefWidth="180"/>
+
+        </VBox>
+    </Tab>
+
+</TabPane>

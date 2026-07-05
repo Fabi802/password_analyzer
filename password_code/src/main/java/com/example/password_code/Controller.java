@@ -22,6 +22,9 @@ public class Controller{
     private boolean visible = false;
 
     @FXML
+    private TextField generatedPasswordField;
+
+    @FXML
     private void checkPassword() {
         String password = passwordField.getText(); //gets the user input
         PasswordStrength passwordStrength = new PasswordStrength();
@@ -40,8 +43,7 @@ public class Controller{
             int index = random.nextInt(CHARACTERS.length());
             password.append(CHARACTERS.charAt(index));
         }
-        passwordField.setText(password.toString());
-        textField.setText(password.toString());
+        generatedPasswordField.setText(password.toString());
     }
 
     @FXML
