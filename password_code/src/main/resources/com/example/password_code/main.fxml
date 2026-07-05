@@ -11,15 +11,18 @@
 <?import javafx.scene.control.Tab?>
 
 
-<TabPane xmlns:fx="http://javafx.com/fxml"
+<TabPane fx:id="root"
+         xmlns:fx="http://javafx.com/fxml"
          xmlns="http://javafx.com/javafx"
          fx:controller="com.example.password_code.Controller">
+
 
     <!-- Tab 1: check password -->
     <Tab text="Analyze" closable="false">
         <VBox spacing="12"
               alignment="CENTER"
-              style="-fx-background-color: #f4f4f4; -fx-padding: 20;">
+              style="-fx-padding: 20;"
+              styleClass="root-pane">
 
             <Label text="Password Analyzer"
                    style="-fx-font-size: 20px; -fx-font-weight: bold;" />
@@ -59,7 +62,8 @@
     <Tab text="Generate" closable="false">
         <VBox spacing="15"
               alignment="CENTER"
-              style="-fx-background-color: #f4f4f4; -fx-padding: 20;">
+              style="-fx-padding: 20;"
+              styleClass="root-pane">
 
             <Label text="Password Generator"
                    style="-fx-font-size: 20px; -fx-font-weight: bold;" />
@@ -72,6 +76,17 @@
             <Button text="generate password"
                     onAction="#generatePassword"
                     prefWidth="180"/>
+
+        </VBox>
+    </Tab>
+
+    <!-- Tab 3: Settings -->
+    <Tab text="Settings" closable="false">
+        <VBox alignment="CENTER" spacing="10"
+              styleClass="root-pane">
+
+            <Button text="🌙 Dark Mode"
+                    onAction="#toggleDarkMode"/>
 
         </VBox>
     </Tab>

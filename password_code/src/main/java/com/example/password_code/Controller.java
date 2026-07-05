@@ -1,9 +1,8 @@
 package com.example.password_code;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.ProgressBar;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.layout.VBox;
+
 import java.security.SecureRandom;
 
 public class Controller{
@@ -23,6 +22,10 @@ public class Controller{
 
     @FXML
     private TextField generatedPasswordField;
+
+    @FXML
+    private TabPane root;
+    private boolean darkMode = false;
 
     @FXML
     private void checkPassword() {
@@ -67,5 +70,17 @@ public class Controller{
         }
 
         visible = !visible;
+    }
+
+    @FXML
+    private void toggleDarkMode() {
+
+        if (darkMode) {
+            root.getStyleClass().remove("dark");
+        } else {
+            root.getStyleClass().add("dark");
+        }
+
+        darkMode = !darkMode;
     }
 }
